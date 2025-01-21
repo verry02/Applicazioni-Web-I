@@ -1,0 +1,13 @@
+-- database: ./database.sqlite
+
+-- Premi il pulsante ▷ nell'angolo in alto a destra della finestra per eseguire l'intero file.
+
+SELECT * FROM obiettivi_utente
+ORDER BY `nuovo` ASC;
+
+-- Per svuotare la tabella ed eliminare tutti gli obiettivi degli utente 
+DELETE  FROM obiettivi_utente;
+
+-- per azzerare tutti i campi degli utenti 
+UPDATE  user
+SET partiteGiocate = 0, partiteVinte =0, partiteConsecutive=0, livello1=0, livello2=0, livello3=0, livello4=0;

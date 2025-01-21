@@ -1,0 +1,132 @@
+##SESSION 
+
+# Login (/api/sessions)
+POST http://localhost:3001/api/sessions
+content-type: application/json
+
+{
+  "username": "giocatore3@gmail.com",
+  "password": "giocatore3"
+}
+###
+
+## Checking if user is still logged-in. (/api/sessions/current)
+GET http://localhost:3001/api/sessions/current
+###
+
+## Execute Log Out. (/api/sessions/current)
+DELETE http://localhost:3001/api/sessions/current
+###
+
+
+##ALTRO
+
+#/api/generaNumeroSegreto 
+POST http://localhost:3001/api/generaNumeroSegreto
+Content-Type: application/json
+
+{
+  "livello": 1
+}
+###
+
+#/api/inviaTentativo
+POST http://localhost:3001/api/inviaTentativo
+Content-Type: application/json
+
+{
+  "numero": 10
+}
+###
+
+
+##UTENTE 
+
+#/api/utente
+GET http://localhost:3001/api/utente?id=1
+###
+
+# /api/utenti/:name/PartiteGiocate
+PUT http://localhost:3001/api/utenti/giocatore3/PartiteGiocate
+###
+
+# /api/utenti/:name/PartiteVinte 
+PUT http://localhost:3001/api/utenti/giocatore1/PartiteVinte
+###
+
+# /api/utenti/:name/resetConsecutive
+PUT http://localhost:3001/api/utenti/giocatore1/resetConsecutive
+###
+
+# /api/utenti/:name/PartiteVinteLivello
+PUT http://localhost:3001/api/utenti/giocatore1/PartiteVinteLivello
+Content-Type: application/json
+
+{
+  "livello": 3
+}
+###
+
+
+##OBIETTIVO
+
+# /api/obiettivi
+GET http://localhost:3001/api/obiettivi
+###
+
+
+##OBIETTIVI UTENTE 
+# /api/utenti/:name/obiettiviUtente
+GET http://localhost:3001/api/utenti/giocatore1/obiettiviUtente
+###
+
+# /api/utenti/:name/obiettiviUtente/obiettiviNuovi
+GET http://localhost:3001/api/utenti/giocatore1/obiettiviUtente/obiettiviNuovi
+###
+
+# /api/utenti/:name/obiettiviUtente/checkAddObiettivoGiocata
+POST http://localhost:3001/api/utenti/giocatore3/obiettiviUtente/checkAddObiettivoGiocata
+Content-Type: application/json
+
+{
+  "livello": 3
+}
+###
+
+# /api/utenti/:name/obiettiviUtente/checkAddObiettivoVinta
+POST http://localhost:3001/api/utenti/giocatore3/obiettiviUtente/checkAddObiettivoVinta
+Content-Type: application/json
+
+{
+  "livello": 30
+}
+###
+
+# /api/utenti/:name/obiettiviUtente/checkAddObiettivoConsecutive
+POST http://localhost:3001/api/utenti/giocatore1/obiettiviUtente/checkAddObiettivoConsecutive
+Content-Type: application/json
+
+{
+  "livello": 3
+}
+###
+
+# /api/utenti/:name/obiettiviUtente/checkAddObiettivoLivello
+POST http://localhost:3000/api/utenti/giocatore3/obiettiviUtente/checkAddObiettivoLivello
+Content-Type: application/json
+
+{
+  "livello": 1
+}
+###
+
+# /api/utenti/:name/obiettiviUtente/resetNuovo
+PUT http://localhost:3001/api/utenti/giocatore1/obiettiviUtente/resetNuovo
+###
+
+# /api/utenti/:name/obiettiviUtente/obiettiviProssimi
+GET http://localhost:3001/api/utenti/giocatore1/obiettiviUtente/obiettiviProssimi
+###
+
+
+
