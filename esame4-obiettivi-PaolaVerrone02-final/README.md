@@ -515,9 +515,9 @@ contiene: id, userId, obiettivo, descrizione, nuovo, icona, livello
 
 ![Screenshot](immagini/Homepage.jpg)
 ![Screenshot](immagini/Login.jpg)
-![Screenshot](immagini/NuovaPartita.jpg)
-![Screenshot](immagini/HomepageName.jpg)
-![Screenshot](immagini/NotFound.jpg)
+![Screenshot](immagini/NuovaPartita.png)
+![Screenshot](immagini/HomepageName.png)
+![Screenshot](immagini/NotFound.png)
 
 ## Users Credentials
 
